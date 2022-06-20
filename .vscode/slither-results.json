@@ -1,0 +1,388 @@
+[
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "payVul",
+				"source_mapping": {
+					"start": 84,
+					"length": 93,
+					"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_relative": "contracts/Vulnerable.sol",
+					"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_short": "contracts/Vulnerable.sol",
+					"is_dependency": false,
+					"lines": [
+						6,
+						7,
+						8
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "c4435978009beb6c1b4f99f5864ac849"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Vulnerable",
+						"source_mapping": {
+							"start": 57,
+							"length": 123,
+							"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_relative": "contracts/Vulnerable.sol",
+							"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_short": "contracts/Vulnerable.sol",
+							"is_dependency": false,
+							"lines": [
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"starting_column": 1,
+							"ending_column": 0
+						}
+					},
+					"signature": "payVul(address,uint256)"
+				}
+			},
+			{
+				"type": "node",
+				"name": "address(to).transfer(amount)",
+				"source_mapping": {
+					"start": 142,
+					"length": 28,
+					"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_relative": "contracts/Vulnerable.sol",
+					"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_short": "contracts/Vulnerable.sol",
+					"is_dependency": false,
+					"lines": [
+						7
+					],
+					"starting_column": 9,
+					"ending_column": 37,
+					"_ext_source_hash": "cd3c60251d82d45a372e62ca964710a0"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "payVul",
+						"source_mapping": {
+							"start": 84,
+							"length": 93,
+							"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_relative": "contracts/Vulnerable.sol",
+							"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_short": "contracts/Vulnerable.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Vulnerable",
+								"source_mapping": {
+									"start": 57,
+									"length": 123,
+									"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+									"filename_relative": "contracts/Vulnerable.sol",
+									"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+									"filename_short": "contracts/Vulnerable.sol",
+									"is_dependency": false,
+									"lines": [
+										4,
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11
+									],
+									"starting_column": 1,
+									"ending_column": 0
+								}
+							},
+							"signature": "payVul(address,uint256)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Vulnerable.payVul(address,uint256) (contracts/Vulnerable.sol#6-8) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(to).transfer(amount) (contracts/Vulnerable.sol#7)\n",
+		"markdown": "[Vulnerable.payVul(address,uint256)](contracts/Vulnerable.sol#L6-L8) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(to).transfer(amount)](contracts/Vulnerable.sol#L7)\n",
+		"first_markdown_element": "contracts/Vulnerable.sol#L6-L8",
+		"id": "da3e42bb3419c1db76a733132586ed256d2d9d87133d7dc35e1eb6acebbc9223",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "to",
+				"source_mapping": {
+					"start": 100,
+					"length": 10,
+					"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_relative": "contracts/Vulnerable.sol",
+					"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_short": "contracts/Vulnerable.sol",
+					"is_dependency": false,
+					"lines": [
+						6
+					],
+					"starting_column": 21,
+					"ending_column": 31,
+					"_ext_source_hash": "c5e7e97d5ca5a33163e9df77c6a0ba87"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "payVul",
+						"source_mapping": {
+							"start": 84,
+							"length": 93,
+							"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_relative": "contracts/Vulnerable.sol",
+							"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_short": "contracts/Vulnerable.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Vulnerable",
+								"source_mapping": {
+									"start": 57,
+									"length": 123,
+									"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+									"filename_relative": "contracts/Vulnerable.sol",
+									"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+									"filename_short": "contracts/Vulnerable.sol",
+									"is_dependency": false,
+									"lines": [
+										4,
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11
+									],
+									"starting_column": 1,
+									"ending_column": 0
+								}
+							},
+							"signature": "payVul(address,uint256)"
+						}
+					}
+				}
+			},
+			{
+				"type": "node",
+				"name": "address(to).transfer(amount)",
+				"source_mapping": {
+					"start": 142,
+					"length": 28,
+					"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_relative": "contracts/Vulnerable.sol",
+					"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_short": "contracts/Vulnerable.sol",
+					"is_dependency": false,
+					"lines": [
+						7
+					],
+					"starting_column": 9,
+					"ending_column": 37,
+					"_ext_source_hash": "cd3c60251d82d45a372e62ca964710a0"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "payVul",
+						"source_mapping": {
+							"start": 84,
+							"length": 93,
+							"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_relative": "contracts/Vulnerable.sol",
+							"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_short": "contracts/Vulnerable.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Vulnerable",
+								"source_mapping": {
+									"start": 57,
+									"length": 123,
+									"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+									"filename_relative": "contracts/Vulnerable.sol",
+									"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+									"filename_short": "contracts/Vulnerable.sol",
+									"is_dependency": false,
+									"lines": [
+										4,
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11
+									],
+									"starting_column": 1,
+									"ending_column": 0
+								}
+							},
+							"signature": "payVul(address,uint256)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Vulnerable.payVul(address,uint256).to (contracts/Vulnerable.sol#6) lacks a zero-check on :\n\t\t- address(to).transfer(amount) (contracts/Vulnerable.sol#7)\n",
+		"markdown": "[Vulnerable.payVul(address,uint256).to](contracts/Vulnerable.sol#L6) lacks a zero-check on :\n\t\t- [address(to).transfer(amount)](contracts/Vulnerable.sol#L7)\n",
+		"first_markdown_element": "contracts/Vulnerable.sol#L6",
+		"id": "0a8a4d81e9bc67995fba7fa8e05e017c7548b9a4f9b77fbd9a109a019d18ec98",
+		"check": "missing-zero-check",
+		"impact": "Low",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.9",
+				"source_mapping": {
+					"start": 32,
+					"length": 23,
+					"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_relative": "contracts/Vulnerable.sol",
+					"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_short": "contracts/Vulnerable.sol",
+					"is_dependency": false,
+					"lines": [
+						2
+					],
+					"starting_column": 1,
+					"ending_column": 24,
+					"_ext_source_hash": "f7149ad190d64d689ae14564e2feda45"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".9"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.9 (contracts/Vulnerable.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.9](contracts/Vulnerable.sol#L2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "contracts/Vulnerable.sol#L2",
+		"id": "0a29d8a1419f28c0f1911d5e468d0091ffa52f118b3b2efcc181b090cf0db319",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [],
+		"description": "solc-0.8.9 is not recommended for deployment\n",
+		"markdown": "solc-0.8.9 is not recommended for deployment\n",
+		"first_markdown_element": "",
+		"id": "f98c7afc3fe47e152024187afa3ad6234319c766cbd9eecabfe34e59dae45c5f",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "payVul",
+				"source_mapping": {
+					"start": 84,
+					"length": 93,
+					"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_relative": "contracts/Vulnerable.sol",
+					"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+					"filename_short": "contracts/Vulnerable.sol",
+					"is_dependency": false,
+					"lines": [
+						6,
+						7,
+						8
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "c4435978009beb6c1b4f99f5864ac849"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Vulnerable",
+						"source_mapping": {
+							"start": 57,
+							"length": 123,
+							"filename_used": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_relative": "contracts/Vulnerable.sol",
+							"filename_absolute": "/home/salvatore_catania/solidity/Vulnerable/contracts/Vulnerable.sol",
+							"filename_short": "contracts/Vulnerable.sol",
+							"is_dependency": false,
+							"lines": [
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"starting_column": 1,
+							"ending_column": 0
+						}
+					},
+					"signature": "payVul(address,uint256)"
+				}
+			}
+		],
+		"description": "payVul(address,uint256) should be declared external:\n\t- Vulnerable.payVul(address,uint256) (contracts/Vulnerable.sol#6-8)\n",
+		"markdown": "payVul(address,uint256) should be declared external:\n\t- [Vulnerable.payVul(address,uint256)](contracts/Vulnerable.sol#L6-L8)\n",
+		"first_markdown_element": "contracts/Vulnerable.sol#L6-L8",
+		"id": "e68593d7e3e526e5af45ecd6bed68b8a56eb3786101f287c83d99d70094ca428",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	}
+]
